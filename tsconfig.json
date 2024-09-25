@@ -1,0 +1,38 @@
+{
+  "include": ["src", "pro/declarations"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "checkJs": false,
+    "allowJs": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": ["ESNext", "DOM"],
+    "module": "CommonJS",
+    "target": "ES5",
+    "outDir": "tar",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declarationMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "bin/*": ["src/bin/*"],
+      "core/*": ["src/core/*"],
+      "main/*": ["src/main/*"],
+      "utils/*": ["src/utils/*"]
+    }
+  }
+}

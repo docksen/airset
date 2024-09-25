@@ -1,0 +1,15 @@
+# project
+/tar/
+/doc/tar/
+**/*.swp.js
+
+# tools
+.git/
+node_modules/
+npm-debug.log
+npm-error.log
+
+# system
+.DS_Store
+.LSOverride
+.AppleDouble
