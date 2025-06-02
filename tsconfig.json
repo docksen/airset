@@ -29,7 +29,10 @@
     "declarationMap": false,
     "baseUrl": ".",
     "paths": {
-      "airset": ["src"]
+      "airset": ["src"],
+      "core/*": ["src/core/*"],
+      "main/*": ["src/main/*"],
+      "utils/*": ["src/utils/*"]
     }
   }
 }

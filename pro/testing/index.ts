@@ -1,7 +1,3 @@
-import {} from 'airset'
-
-main()
-
-function main() {
-  console.log('Please implement testing code.')
-}
+import './comparators'
+import './replicators'
+import './updaters'

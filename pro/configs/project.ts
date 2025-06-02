@@ -3,7 +3,11 @@ import type { SdinProjectParams, SdinTestingParams, SdinPlayingParams } from 'sd
 export const sdinProjectParams: SdinProjectParams = {
   testing: getSdinTestingParams(),
   playing: getSdinPlayingParams(),
-  alias: {},
+  alias: {
+    core: 'src/core',
+    main: 'src/main',
+    utils: 'src/utils'
+  },
   modules: [
     {
       type: 'foundation',
@@ -23,7 +27,10 @@ export const sdinProjectParams: SdinProjectParams = {
       type: 'integration',
       name: 'urgoth',
       mode: 'umd',
-      variable: 'airset'
+      variable: 'airset',
+      externals: {
+        react: 'React'
+      }
     }
   ]
 }
@@ -31,7 +38,7 @@ export const sdinProjectParams: SdinProjectParams = {
 function getSdinTestingParams(): SdinTestingParams {
   return {
     alias: {
-      'airset': 'tar/cjs'
+      airset: 'tar/cjs'
     }
   }
 }
@@ -39,7 +46,7 @@ function getSdinTestingParams(): SdinTestingParams {
 function getSdinPlayingParams(): SdinPlayingParams {
   return {
     alias: {
-      'airset': 'src'
+      airset: 'src'
     },
     externals: {
       typescript: 'ts',

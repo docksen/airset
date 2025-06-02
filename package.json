@@ -1,13 +1,13 @@
 {
   "name": "airset",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React state manager.",
   "keywords": [],
   "homepage": "https://github.com/docksen.yang/airset#readme",
   "bugs": "https://github.com/docksen.yang/airset/issues",
   "repository": {
     "type": "git",
-    "url":  "git+https://github.com/docksen.yang/airset.git"
+    "url": "git+https://github.com/docksen.yang/airset.git"
   },
   "license": "LGPL-3.0",
   "author": "docksen.yang <docksen@hotmail.com>",
@@ -26,7 +26,8 @@
     "test": "sdin test"
   },
   "dependencies": {
-    "@babel/runtime": "^7.25.0"
+    "@babel/runtime": "^7.25.0",
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.0",
@@ -35,7 +36,6 @@
     "@types/react-dom": "^18.3.3",
     "classnames": "^2.3.0",
     "lodash": "^4.14.0",
-    "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sdin": "^1.2.0",
     "typescript": "^5.5.4"
