@@ -347,9 +347,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 设置数据
+   * 设置缓存数据（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据，不会更新当前数据和刷新页面
    * - 若要更新当前数据并刷新页面，请使用 update 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -362,9 +361,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 更新数据
+   * 更新当前数据，并刷新页面
    *
-   * - 更新当前数据，并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param data 缓存数据
@@ -376,9 +374,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 设置数据中的部分浅层字段
+   * 设置缓存数据中的部分浅层字段（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据中的部分字段，不会更新当前数据和刷新页面
    * - 若要更新当前数据中的部分浅层字段并刷新页面，请使用 updatePart 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -397,9 +394,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 更新数据中的部分浅层字段
+   * 更新当前数据中的部分浅层字段并刷新页面
    *
-   * - 更新当前数据中的部分浅层字段并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param partData 缓存数据中的部分浅层字段
@@ -411,9 +407,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 设置数据中的某个浅层字段
+   * 设置缓存数据中的某个浅层字段（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据中的某个字段，不会更新当前数据和刷新页面
    * - 若要更新当前数据中的某个浅层字段并刷新页面，请使用 updateItem 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -430,9 +425,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 更新数据中的某个浅层字段
+   * 更新当前数据中的某个浅层字段并刷新页面
    *
-   * - 更新当前数据中的某个浅层字段并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param key 浅层字段名
@@ -445,9 +439,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 设置数据中的某个路径下的字段
+   * 设置缓存数据中的某个路径下的字段（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据中的某个路径下的字段，不会更新当前数据和刷新页面
    * - 若要更新当前数据中的某个路径下的字段并刷新页面，请使用 updateItem 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -474,9 +467,8 @@ export abstract class Store<D extends object> extends Emitter {
   }
 
   /**
-   * 更新数据中的某个路径下的字段
+   * 更新当前数据中的某个路径下的字段并刷新页面
    *
-   * - 更新当前数据中的某个路径下的字段并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param path 字段路径

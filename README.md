@@ -383,9 +383,8 @@ abstract class Store<D extends object> extends Emitter {
   ): Promise<StoreTaskContext<this> | undefined>
 
   /**
-   * Set data
+   * Set cached data (will not update current data and refresh the page)
    *
-   * - Only set cached data, will not update current data and refresh the page
    * - To update current data and refresh the page, please use the update method
    * - To refresh the page, use the refresh method
    *
@@ -395,9 +394,8 @@ abstract class Store<D extends object> extends Emitter {
   set(data?: D): this
 
   /**
-   * Update data
+   * Update the current data and refresh the page
    *
-   * - Update the current data and refresh the page
    * - To refresh the page, use the refresh method
    *
    * @param data cache data
@@ -406,9 +404,8 @@ abstract class Store<D extends object> extends Emitter {
   update(data?: D): boolean
 
   /**
-   * Set some shallow fields in the data
+   * Set some shallow fields in the cached data (will not update the current data and refresh the page)
    *
-   * - Only set some fields in the cached data, will not update the current data and refresh the page
    * - To update some shallow fields in the current data and refresh the page, use the updatePart method
    * - To refresh the page, use the refresh method
    *
@@ -418,9 +415,8 @@ abstract class Store<D extends object> extends Emitter {
   setPart(partData: Partial<D>): this
 
   /**
-   * Update some shallow fields in the data
+   * Update some shallow fields in the current data and refresh the page
    *
-   * - Update some shallow fields in the current data and refresh the page
    * - To refresh the page, use the refresh method
    *
    * @param partData Some shallow fields in the cached data
@@ -429,9 +425,8 @@ abstract class Store<D extends object> extends Emitter {
   updatePart(partData: Partial<D>): boolean
 
   /**
-   * Set a shallow field in the data
+   * Set a shallow field in the cached data (will not update the current data and refresh the page)
    *
-   * - Only set a field in the cached data, will not update the current data and refresh the page
    * - To update a shallow field in the current data and refresh the page, use the updateItem method
    * - To refresh the page, use the refresh method
    *
@@ -442,9 +437,8 @@ abstract class Store<D extends object> extends Emitter {
   setItem(key: keyof D, value: D[keyof D]): this
 
   /**
-   * Update a shallow field in the data
+   * Update a shallow field in the current data and refresh the page
    *
-   * - Update a shallow field in the current data and refresh the page
    * - To refresh the page, use the refresh method
    *
    * @param key Shallow field name
@@ -454,9 +448,8 @@ abstract class Store<D extends object> extends Emitter {
   updateItem(key: keyof D, value: D[keyof D]): boolean
 
   /**
-   * Set a field under a path in the data
+   * Set a field under a path in the cached data (will not update the current data or refresh the page)
    *
-   * - Only set a field under a path in the cached data, and will not update the current data or refresh the page
    * - To update a field under a path in the current data and refresh the page, use the updateItem method
    * - To refresh the page, use the refresh method
    *
@@ -467,9 +460,8 @@ abstract class Store<D extends object> extends Emitter {
   setPath(path: string, value: any): this
 
   /**
-   * Update a field under a path in the data
+   * Update a field under a path in the current data and refresh the page
    *
-   * - Update a field under a path in the current data and refresh the page
    * - To refresh the page, use the refresh method
    *
    * @param path field path

@@ -1,6 +1,6 @@
 {
   "name": "airset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React state manager.",
   "keywords": [],
   "homepage": "https://github.com/docksen.yang/airset#readme",
@@ -37,7 +37,7 @@
     "classnames": "^2.3.0",
     "lodash": "^4.14.0",
     "react-dom": "^18.3.1",
-    "sdin": "^1.2.0",
+    "sdin": "^1.2.2",
     "typescript": "^5.5.4"
   },
   "engines": {
