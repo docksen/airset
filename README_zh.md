@@ -383,9 +383,8 @@ abstract class Store<D extends object> extends Emitter {
   ): Promise<StoreTaskContext<this> | undefined>
 
   /**
-   * 设置数据
+   * 设置缓存数据（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据，不会更新当前数据和刷新页面
    * - 若要更新当前数据并刷新页面，请使用 update 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -395,9 +394,8 @@ abstract class Store<D extends object> extends Emitter {
   set(data?: D): this
 
   /**
-   * 更新数据
+   * 更新当前数据，并刷新页面
    *
-   * - 更新当前数据，并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param data 缓存数据
@@ -406,9 +404,8 @@ abstract class Store<D extends object> extends Emitter {
   update(data?: D): boolean
 
   /**
-   * 设置数据中的部分浅层字段
+   * 设置缓存数据中的部分浅层字段（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据中的部分字段，不会更新当前数据和刷新页面
    * - 若要更新当前数据中的部分浅层字段并刷新页面，请使用 updatePart 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -418,9 +415,8 @@ abstract class Store<D extends object> extends Emitter {
   setPart(partData: Partial<D>): this
 
   /**
-   * 更新数据中的部分浅层字段
+   * 更新当前数据中的部分浅层字段并刷新页面
    *
-   * - 更新当前数据中的部分浅层字段并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param partData 缓存数据中的部分浅层字段
@@ -429,9 +425,8 @@ abstract class Store<D extends object> extends Emitter {
   updatePart(partData: Partial<D>): boolean
 
   /**
-   * 设置数据中的某个浅层字段
+   * 设置缓存数据中的某个浅层字段（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据中的某个字段，不会更新当前数据和刷新页面
    * - 若要更新当前数据中的某个浅层字段并刷新页面，请使用 updateItem 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -442,9 +437,8 @@ abstract class Store<D extends object> extends Emitter {
   setItem(key: keyof D, value: D[keyof D]): this
 
   /**
-   * 更新数据中的某个浅层字段
+   * 更新当前数据中的某个浅层字段并刷新页面
    *
-   * - 更新当前数据中的某个浅层字段并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param key 浅层字段名
@@ -454,9 +448,8 @@ abstract class Store<D extends object> extends Emitter {
   updateItem(key: keyof D, value: D[keyof D]): boolean
 
   /**
-   * 设置数据中的某个路径下的字段
+   * 设置缓存数据中的某个路径下的字段（不会更新当前数据和刷新页面）
    *
-   * - 只设置缓存数据中的某个路径下的字段，不会更新当前数据和刷新页面
    * - 若要更新当前数据中的某个路径下的字段并刷新页面，请使用 updateItem 方法
    * - 若要刷新页面，请使用 refresh 方法
    *
@@ -467,9 +460,8 @@ abstract class Store<D extends object> extends Emitter {
   setPath(path: string, value: any): this
 
   /**
-   * 更新数据中的某个路径下的字段
+   * 更新当前数据中的某个路径下的字段并刷新页面
    *
-   * - 更新当前数据中的某个路径下的字段并刷新页面
    * - 若要刷新页面，请使用 refresh 方法
    *
    * @param path 字段路径

@@ -44,7 +44,7 @@ export default function Index() {
       <div
         onClick={() => {
           console.log('clicked!')
-          store.setItem('value', data.value + 1).update()
+          store.setItem('value', data.value + 1).refresh()
         }}
       >
         add 1
@@ -52,7 +52,7 @@ export default function Index() {
       <div
         onClick={() => {
           console.log('clicked!')
-          store.setItem('value', data.value + 0).update()
+          store.setItem('value', data.value + 0).refresh()
         }}
       >
         add 0

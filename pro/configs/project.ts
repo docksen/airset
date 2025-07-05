@@ -38,7 +38,7 @@ export const sdinProjectParams: SdinProjectParams = {
 function getSdinTestingParams(): SdinTestingParams {
   return {
     alias: {
-      airset: 'tar/cjs'
+      airset: 'src'
     }
   }
 }
